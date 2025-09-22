@@ -6,18 +6,18 @@
     <title>Krya Solutions: Cybersecurity Weekly</title>
     <style>
         :root {
-            --primary-blue: #173962;
-            --accent-orange: #F38144;
+            --blue: #173962;
+            --orange: #F38144;
             --light-gray: #f8f9fa;
-            --dark-gray: #333;
-            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --white: #ffffff;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark-gray);
-            background-color: #f5f5f5;
+            background-color: var(--light-gray);
             margin: 0;
             padding: 0;
         }
@@ -29,79 +29,75 @@
         }
 
         header {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 30px 20px;
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 20px 0;
             text-align: center;
             margin-bottom: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .title-container {
-            max-width: 800px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h3 {
-            font-size: 2rem;
-            margin: 0 0 10px 0;
-            font-weight: 700;
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: 600;
         }
 
         .date {
-            font-size: 1.2rem;
-            color: var(--accent-orange);
-            margin: 0;
-            font-weight: 500;
+            font-size: 1.1rem;
+            color: var(--orange);
+            margin-top: 5px;
         }
 
-        .summary {
-            background-color: white;
-            padding: 25px;
+        .summary-section {
+            background-color: var(--white);
             border-radius: 8px;
+            padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            color: var(--primary-blue);
-            font-size: 1.8rem;
+            color: var(--blue);
+            font-size: 2rem;
             margin-top: 0;
-            border-bottom: 2px solid var(--accent-orange);
-            padding-bottom: 10px;
         }
 
-        .summary p {
-            margin: 0;
-            color: var(--medium-gray);
+        .summary-section p {
+            font-size: 1.1rem;
+            margin-bottom: 0;
         }
 
-        .section {
-            background-color: white;
+        .section-tile {
+            background-color: var(--white);
             border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            margin-top: 0;
+            color: var(--blue);
+            border-bottom: 2px solid var(--orange);
             padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent-orange);
+            margin-top: 0;
         }
 
         ul {
             list-style-type: none;
-            padding: 0;
+            padding-left: 0;
         }
 
         li {
             margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e9ecef;
         }
 
         li:last-child {
@@ -111,30 +107,29 @@
         }
 
         a {
-            color: var(--primary-blue);
+            color: var(--blue);
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s;
         }
 
         a:hover {
-            color: var(--accent-orange);
+            color: var(--orange);
             text-decoration: underline;
         }
 
-        em {
-            color: var(--medium-gray);
-            font-style: normal;
-            display: block;
-            margin: 5px 0;
+        .date-posted {
+            color: var(--orange);
             font-size: 0.9rem;
+            display: block;
+            margin-bottom: 5px;
         }
 
-        .takeaways {
-            background-color: var(--light-gray);
-            padding: 25px;
+        .conclusion-section {
+            background-color: var(--white);
             border-radius: 8px;
+            padding: 25px;
             margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -142,24 +137,16 @@
                 padding: 15px;
             }
 
-            header {
-                padding: 20px 15px;
+            .section-tile, .summary-section, .conclusion-section {
+                padding: 15px;
             }
 
             h3 {
                 font-size: 1.5rem;
             }
 
-            .date {
-                font-size: 1rem;
-            }
-
             h1 {
-                font-size: 1.4rem;
-            }
-
-            h2 {
-                font-size: 1.3rem;
+                font-size: 1.75rem;
             }
         }
     </style>
@@ -170,98 +157,97 @@
             <div class="title-container">
                 <h3>Krya Solutions: Cybersecurity Weekly</h3>
                 <p class="date">21 September, 2025</p>
-                <p>AI-Driven Insights on Emerging Threats and Major Disruptions</p>
             </div>
         </header>
 
-        <div class="summary">
-            <h1>Cybersecurity Weekly Digest: Critical Vulnerabilities and High-Impact Attacks</h1>
-            <p>This week’s cybersecurity news highlights critical vulnerabilities, high-profile attacks, and emerging threats affecting enterprises and public infrastructure. From zero-click exploits in OpenAI’s ChatGPT to DPRK-linked campaigns targeting cryptocurrency firms, attackers are leveraging deception and misconfigured systems to compromise sensitive data. Meanwhile, cloud providers, security vendors, and law enforcement are addressing critical flaws and taking action against hacking groups. Stay informed as these trends underscore the evolving threat landscape and the need for proactive defenses.</p>
+        <div class="summary-section">
+            <h1>Cybersecurity News Digest: September 2025</h1>
+            <p>Welcome to this week's edition of the Cybersecurity News Digest, where we cover critical disruptions in aviation, emerging vulnerabilities, and high-profile hacker arrests. From zero-click exploits to North Korean-linked cyberattacks, this edition highlights the evolving threats facing organizations today. Stay informed and proactive to safeguard your systems.</p>
         </div>
 
-        <div class="section">
-            <h2>Vulnerabilities</h2>
-            <ul>
-                <li>
-                    <a href="https://www.securityweek.com/fortra-patches-critical-goanywhere-mft-vulnerability/">Fortra Patches Critical GoAnywhere MFT Vulnerability</a>
-                    <em>2025-09-22T05:47:00.000Z</em>
-                    <p>A critical deserialization flaw in Fortra’s GoAnywhere MFT allows remote attackers to execute arbitrary commands, posing a severe risk to managed file transfer systems.</p>
-                </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/microsoft-patches-critical-entra-id.html">Microsoft Patches Critical Entra ID Flaw Enabling Global Admin Impersonation</a>
-                    <em>2025-09-22T07:50:52.000Z</em>
-                    <p>Microsoft addressed a critical token validation flaw in Entra ID (Azure AD) that could allow attackers to impersonate any user, including Global Administrators, across any tenant.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Malware</h2>
-            <ul>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/dprk-hackers-use-clickfix-to-deliver.html">DPRK Hackers Use ClickFix to Deliver BeaverTail Malware in Crypto Job Scams</a>
-                    <em>2025-09-20T07:07:00.000Z</em>
-                    <p>North Korean-linked threat actors are using ClickFix-style lures to deliver BeaverTail malware in cryptocurrency job scams, targeting marketing and trading roles.</p>
-                </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/lastpass-warns-of-fake-repositories.html">LastPass Warns of Fake Repositories Infecting macOS with Atomic Infostealer</a>
-                    <em>2025-09-21T10:56:00.000Z</em>
-                    <p>Fraudulent GitHub repositories are distributing Atomic infostealer malware, posing a risk to macOS users who download fake LastPass tools.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Data Breaches</h2>
-            <ul>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/shadowleak-zero-click-flaw-leaks-gmail.html">ShadowLeak Zero-Click Flaw Leaks Gmail Data via OpenAI ChatGPT Deep Research Agent</a>
-                    <em>2025-09-20T05:31:00.000Z</em>
-                    <p>A zero-click exploit in OpenAI’s ChatGPT Deep Research agent allows attackers to leak Gmail inbox data with a single crafted email, requiring no user interaction.</p>
-                </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/sonicwall-urges-password-resets-after.html">SonicWall Urges Password Resets After Cloud Backup Breach Affecting Under 5% of Customers</a>
-                    <em>2025-09-18T14:12:00.000Z</em>
-                    <p>SonicWall detected unauthorized access to firewall configuration backups, prompting password resets for affected customers.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Policy & Legal</h2>
-            <ul>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/uk-arrest-two-teen-scattered-spider.html">U.K. Arrests Two Teen Scattered Spider Hackers Linked to August 2024 TfL Cyber Attack</a>
-                    <em>2025-09-19T07:05:00.000Z</em>
-                    <p>Law enforcement in the U.K. arrested two members of the Scattered Spider hacking group in connection with an August 2024 attack on Transport for London.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
+        <div class="section-tile">
             <h2>General Security News</h2>
             <ul>
                 <li>
+                    <span class="date-posted">2025-09-20</span>
                     <a href="https://www.securityweek.com/cyberattack-disrupts-check-in-systems-at-major-european-airports/">Cyberattack Disrupts Check-In Systems at Major European Airports</a>
-                    <em>2025-09-20T15:33:00.000Z</em>
-                    <p>A cyberattack disrupted electronic check-in systems at major European airports, forcing passengers to rely on manual check-in and boarding procedures.</p>
+                    <p>A recent cyberattack disrupted electronic check-in systems at major European airports, forcing passengers to rely on manual check-in and boarding processes. The incident underscores the growing risks to critical infrastructure in the aviation sector.</p>
                 </li>
                 <li>
-                    <a href="https://aws.amazon.com/blogs/security/summer-2025-soc-1report-is-now-available-with-183-services-in-scope/">Summer 2025 SOC 1 Report Now Available with 183 Services in Scope</a>
-                    <em>2025-09-19T16:28:41.000Z</em>
-                    <p>AWS has released its Summer 2025 SOC 1 report, covering 183 services and demonstrating continuous compliance with security standards.</p>
+                    <span class="date-posted">2025-09-19</span>
+                    <a href="https://aws.amazon.com/blogs/security/summer-2025-soc-1report-is-now-available-with-183-services-in-scope/">Summer 2025 SOC 1 Report Now Available</a>
+                    <p>AWS has released its Summer 2025 SOC 1 report, covering 183 services and demonstrating continuous compliance with security controls. This report provides assurance to customers relying on AWS for secure operations.</p>
                 </li>
                 <li>
-                    <a href="https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/">AWS Organizations Now Supports Full IAM Language for Service Control Policies</a>
-                    <em>2025-09-19T17:50:10.000Z</em>
-                    <p>AWS Organizations now supports full IAM policy language for service control policies, enabling more granular access control and resource targeting.</p>
+                    <span class="date-posted">2025-09-19</span>
+                    <a href="https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/">AWS Organizations Now Supports Full IAM Language</a>
+                    <p>AWS Organizations now supports full IAM language for service control policies, enabling more granular access control and enhanced security for cloud environments.</p>
                 </li>
             </ul>
         </div>
 
-        <div class="section takeaways">
-            <h2>Key Takeaways & Implications</h2>
-            <p>This week’s news underscores the critical need for organizations to prioritize patch management, secure cloud configurations, and user awareness against social engineering attacks. The emergence of zero-click exploits and North Korean-linked malware campaigns highlights the evolving tactics of threat actors, emphasizing the importance of proactive threat intelligence and incident response planning. Security professionals should stay vigilant and adapt defenses to mitigate emerging risks.</p>
+        <div class="section-tile">
+            <h2>Policy & Legal</h2>
+            <ul>
+                <li>
+                    <span class="date-posted">2025-09-19</span>
+                    <a href="https://thehackernews.com/2025/09/uk-arrest-two-teen-scattered-spider.html">U.K. Arrests Two Teen Scattered Spider Hackers</a>
+                    <p>UK authorities have arrested two teenagers linked to the Scattered Spider hacking group, suspected of participating in a 2024 cyberattack against Transport for London. This case highlights the growing threat of youth-driven cybercrime.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-tile">
+            <h2>Data Breaches</h2>
+            <ul>
+                <li>
+                    <span class="date-posted">2025-09-20</span>
+                    <a href="https://thehackernews.com/2025/09/shadowleak-zero-click-flaw-leaks-gmail.html">ShadowLeak Zero-Click Flaw Exploits OpenAI's Deep Research Agent</a>
+                    <p>Researchers discovered a zero-click exploit in OpenAI's Deep Research agent that could leak Gmail data without user interaction. This vulnerability, codenamed ShadowLeak, was addressed by OpenAI in August.</p>
+                </li>
+                <li>
+                    <span class="date-posted">2025-09-18</span>
+                    <a href="https://thehackernews.com/2025/09/sonicwall-urges-password-resets-after.html">SonicWall Warns of Cloud Backup Breach</a>
+                    <p>SonicWall has detected a breach in its cloud backup service, affecting less than 5% of customers. The company recommends password resets to mitigate potential risks.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-tile">
+            <h2>Malware</h2>
+            <ul>
+                <li>
+                    <span class="date-posted">2025-09-21</span>
+                    <a href="https://thehackernews.com/2025/09/dprk-hackers-use-clickfix-to-deliver.html">DPRK Hackers Use ClickFix Lures to Deliver BeaverTail Malware</a>
+                    <p>North Korean-linked threat actors are using ClickFix-style lures to deliver BeaverTail malware in cryptocurrency and retail sector job scams. This tactic targets marketing and trading roles rather than software development.</p>
+                </li>
+                <li>
+                    <span class="date-posted">2025-09-20</span>
+                    <a href="https://thehackernews.com/2025/09/lastpass-warns-of-fake-repositories.html">LastPass Warns of Fake macOS Infostealer Campaign</a>
+                    <p>LastPass has issued a warning about a widespread infostealer campaign targeting macOS users via fake GitHub repositories. The campaign delivers Atomic infostealer malware disguised as legitimate tools.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-tile">
+            <h2>Vulnerabilities</h2>
+            <ul>
+                <li>
+                    <span class="date-posted">2025-09-22</span>
+                    <a href="https://www.securityweek.com/fortra-patches-critical-goanywhere-mft-vulnerability/">Fortra Patches Critical GoAnywhere MFT Vulnerability</a>
+                    <p>Fortra has patched a critical deserialization vulnerability in GoAnywhere MFT, which could allow command injection attacks. This flaw, tracked as CVE-2025-10035, poses a significant risk to organizations using the software.</p>
+                </li>
+                <li>
+                    <span class="date-posted">2025-09-22</span>
+                    <a href="https://thehackernews.com/2025/09/microsoft-patches-critical-entra-id.html">Microsoft Patches Critical Entra ID Flaw</a>
+                    <p>Microsoft has patched a critical token validation flaw in Entra ID, which could allow attackers to impersonate any user, including Global Administrators. This vulnerability, CVE-2025-55241, has been assigned a CVSS score of 10.0.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="conclusion-section">
+            <h2>Conclusion</h2>
+            <p>This week's cybersecurity news highlights the persistent and evolving nature of cyber threats, from critical infrastructure disruptions to high-profile vulnerabilities and state-sponsored attacks. Organizations must stay vigilant, apply patches promptly, and adopt proactive security measures to mitigate risks. As cybercriminals continue to exploit new vulnerabilities and tactics, continuous learning and adaptation are essential for maintaining robust security postures.</p>
         </div>
     </div>
 </body>
