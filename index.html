@@ -6,18 +6,17 @@
     <title>Krya Solutions: Cybersecurity Weekly</title>
     <style>
         :root {
-            --primary-blue: #173962;
-            --accent-orange: #F38144;
+            --blue: #173962;
+            --orange: #F38144;
             --light-gray: #f8f9fa;
             --dark-gray: #333;
-            --border-radius: 8px;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark-gray);
-            background-color: #f5f7fa;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
         }
@@ -28,202 +27,233 @@
             padding: 20px;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: var(--primary-blue);
+        header {
+            background-color: var(--blue);
             color: white;
-            border-radius: var(--border-radius);
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 8px;
         }
 
-        .header h3 {
-            margin: 5px 0;
-            font-weight: 600;
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
         }
 
-        .header .date {
-            font-size: 0.9em;
+        .header-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
             opacity: 0.9;
         }
 
-        .summary {
+        .header-date {
+            font-size: 1rem;
+            margin-top: 1rem;
+            font-weight: 500;
+            color: var(--orange);
+        }
+
+        .summary-section {
             background-color: white;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid var(--accent-orange);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .summary h2 {
-            color: var(--primary-blue);
-            margin-top: 0;
-            border-bottom: 2px solid var(--accent-orange);
-            padding-bottom: 10px;
+        .summary-title {
+            color: var(--blue);
+            border-bottom: 2px solid var(--orange);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .section {
+        .section-tile {
             background-color: white;
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .section h2 {
-            color: var(--primary-blue);
-            border-bottom: 2px solid var(--accent-orange);
-            padding-bottom: 8px;
-            margin-top: 0;
+        .section-title {
+            color: var(--blue);
+            border-left: 4px solid var(--orange);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .section ul {
-            padding-left: 20px;
+        .post-list {
+            list-style: none;
+            padding: 0;
         }
 
-        .section li {
-            margin-bottom: 15px;
+        .post-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
         }
 
-        .section a {
-            color: var(--primary-blue);
+        .post-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .post-link {
+            color: var(--blue);
             text-decoration: none;
             font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
-        .section a:hover {
+        .post-link:hover {
+            color: var(--orange);
             text-decoration: underline;
-            color: var(--accent-orange);
         }
 
-        .section p {
-            margin: 5px 0 0 0;
-            color: #555;
+        .post-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            font-style: italic;
+        }
+
+        .post-description {
+            margin: 0.5rem 0 0;
+            color: #444;
         }
 
         .key-takeaways {
-            background-color: white;
-            padding: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            border-top: 4px solid var(--accent-orange);
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
         }
 
-        .key-takeaways h2 {
-            color: var(--primary-blue);
-            margin-top: 0;
-        }
-
-        .date-display {
-            font-size: 1.1em;
-            font-weight: 500;
-            color: white;
-            margin-top: 5px;
+        .key-takeaways-title {
+            color: var(--blue);
+            margin-bottom: 1rem;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
+            .header-title {
+                font-size: 2rem;
             }
 
-            .header {
-                padding: 15px;
+            .header-subtitle {
+                font-size: 1rem;
             }
 
-            .section, .summary, .key-takeaways {
-                padding: 15px;
+            .section-title {
+                font-size: 1.3rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h3>Krya Solutions: Cybersecurity Weekly</h3>
-            <h3>AI-Driven Insights on Emerging Threats and Major Disruptions</h3>
-            <div class="date-display">21 September, 2025</div>
-        </div>
+        <header>
+            <h3 class="header-title">Krya Solutions: Cybersecurity Weekly</h3>
+            <h3 class="header-subtitle">AI-Driven Insights on Emerging Threats and Major Disruptions</h3>
+            <div class="header-date">21 September, 2025</div>
+        </header>
 
-        <div class="summary">
-            <h2>Summary</h2>
-            <p>Welcome to this week’s cybersecurity newsletter, where we highlight critical vulnerabilities, operational disruptions, and law enforcement actions against cybercriminals. From zero-click exploits in AI platforms to high-severity flaws in enterprise software, attackers continue to exploit sophisticated techniques. Meanwhile, cloud providers and tech firms issue urgent security advisories, while law enforcement takes action against threat actors. Stay informed to protect your organization from evolving threats.</p>
-        </div>
+        <section class="summary-section">
+            <h2 class="summary-title">Cybersecurity Weekly Digest: Critical Vulnerabilities and Emerging Threats</h2>
+            <p>This week’s top cybersecurity stories highlight critical vulnerabilities, operational disruptions, and sophisticated attack techniques. From zero-click exploits in OpenAI’s Deep Research agent to a critical flaw in Fortra’s GoAnywhere MFT, attackers are exploiting weaknesses to bypass defenses. AWS expands IAM controls, SonicWall warns of exposed firewall backups, and North Korean-linked threat actors exploit ClickFix lures. Law enforcement in the U.K. takes down members of Scattered Spider, and LastPass issues an alert on macOS malware distribution. Stay vigilant—these threats demand immediate attention.</p>
+        </section>
 
-        <div class="section">
-            <h2>Vulnerabilities</h2>
-            <ul>
-                <li>
-                    <a href="https://www.securityweek.com/fortra-patches-critical-goanywhere-mft-vulnerability/">Fortra Patches Critical GoAnywhere MFT Vulnerability</a> (2025-09-22)
-                    <p>A critical deserialization flaw in Fortra’s GoAnywhere MFT (CVE-2025-10035) could allow attackers to execute arbitrary commands, posing a severe risk to managed file transfer systems.</p>
+        <section class="section-tile">
+            <h2 class="section-title">Vulnerabilities</h2>
+            <ul class="post-list">
+                <li class="post-item">
+                    <a href="https://www.securityweek.com/fortra-patches-critical-goanywhere-mft-vulnerability/" class="post-link">Fortra Patches Critical GoAnywhere MFT Vulnerability</a>
+                    <p class="post-date"><em>2025-09-22T05:47:00.000Z</em></p>
+                    <p class="post-description">A critical deserialization flaw (CVE-2025-10035) in Fortra’s GoAnywhere MFT allows attackers to execute arbitrary commands, posing a severe risk to managed file transfer operations.</p>
                 </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/microsoft-patches-critical-entra-id.html">Microsoft Patches Critical Entra ID Flaw Enabling Global Admin Impersonation</a> (2025-09-22)
-                    <p>Microsoft addressed a critical token validation failure in Entra ID (CVE-2025-55241), which could allow attackers to impersonate any user, including Global Administrators, across any tenant.</p>
+                <li class="post-item">
+                    <a href="https://thehackernews.com/2025/09/microsoft-patches-critical-entra-id.html" class="post-link">Microsoft Patches Critical Entra ID Flaw Enabling Global Admin Impersonation</a>
+                    <p class="post-date"><em>2025-09-22T07:50:52.000Z</em></p>
+                    <p class="post-description">A token validation failure in Microsoft Entra ID (CVE-2025-55241) could allow attackers to impersonate any user, including Global Administrators, across any tenant.</p>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>Malware</h2>
-            <ul>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/shadowleak-zero-click-flaw-leaks-gmail.html">ShadowLeak Zero-Click Flaw Leaks Gmail Data via OpenAI ChatGPT Deep Research Agent</a> (2025-09-20)
-                    <p>Researchers discovered a zero-click exploit in OpenAI’s ChatGPT Deep Research agent that allows attackers to leak Gmail inbox data without user interaction.</p>
+        <section class="section-tile">
+            <h2 class="section-title">Malware</h2>
+            <ul class="post-list">
+                <li class="post-item">
+                    <a href="https://thehackernews.com/2025/09/dprk-hackers-use-clickfix-to-deliver.html" class="post-link">DPRK Hackers Use ClickFix to Deliver BeaverTail Malware in Crypto Job Scams</a>
+                    <p class="post-date"><em>2025-09-21T10:56:00.000Z</em></p>
+                    <p class="post-description">North Korean-linked threat actors exploit ClickFix-style lures to deliver BeaverTail malware in cryptocurrency job scams, targeting marketing and trader roles.</p>
                 </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/dprk-hackers-use-clickfix-to-deliver.html">DPRK Hackers Use ClickFix to Deliver BeaverTail Malware in Crypto Job Scams</a> (2025-09-21)
-                    <p>North Korean hackers exploited ClickFix-style lures to deliver BeaverTail malware in cryptocurrency job scams, targeting marketing and trading roles.</p>
-                </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/lastpass-warns-of-fake-repositories.html">LastPass Warns of Fake Repositories Infecting macOS with Atomic Infostealer</a> (2025-09-20)
-                    <p>LastPass alerted users to fake GitHub repositories distributing Atomic infostealer malware, targeting macOS users with password-stealing tools.</p>
+                <li class="post-item">
+                    <a href="https://thehackernews.com/2025/09/lastpass-warns-of-fake-repositories.html" class="post-link">LastPass Warns of Fake Repositories Infecting macOS with Atomic Infostealer</a>
+                    <p class="post-date"><em>2025-09-20T07:07:00.000Z</em></p>
+                    <p class="post-description">Fraudulent GitHub repositories distribute malware-laced programs that steal sensitive data from macOS users.</p>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>Data Breaches</h2>
-            <ul>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/sonicwall-urges-password-resets-after.html">SonicWall Urges Password Resets After Cloud Backup Breach</a> (2025-09-18)
-                    <p>SonicWall advised customers to reset credentials after threat actors accessed cloud backup files for under 5% of its firewall users.</p>
+        <section class="section-tile">
+            <h2 class="section-title">Data Breaches</h2>
+            <ul class="post-list">
+                <li class="post-item">
+                    <a href="https://thehackernews.com/2025/09/shadowleak-zero-click-flaw-leaks-gmail.html" class="post-link">ShadowLeak Zero-Click Flaw Leaks Gmail Data via OpenAI ChatGPT Deep Research Agent</a>
+                    <p class="post-date"><em>2025-09-20T05:31:00.000Z</em></p>
+                    <p class="post-description">A zero-click exploit in OpenAI’s Deep Research agent allows attackers to leak Gmail inbox data without user interaction.</p>
+                </li>
+                <li class="post-item">
+                    <a href="https://thehackernews.com/2025/09/sonicwall-urges-password-resets-after.html" class="post-link">SonicWall Urges Password Resets After Cloud Backup Breach Affecting Under 5% of Customers</a>
+                    <p class="post-date"><em>2025-09-18T14:12:00.000Z</em></p>
+                    <p class="post-description">Exposed firewall backup files in SonicWall’s cloud service prompted a password reset advisory for affected users.</p>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>Policy & Legal</h2>
-            <ul>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/uk-arrest-two-teen-scattered-spider.html">U.K. Arrests Two Teen Scattered Spider Hackers Linked to August 2024 TfL Cyber Attack</a> (2025-09-19)
-                    <p>Law enforcement arrested two members of the Scattered Spider hacking group in connection with an August 2024 cyberattack targeting Transport for London.</p>
+        <section class="section-tile">
+            <h2 class="section-title">Policy & Legal</h2>
+            <ul class="post-list">
+                <li class="post-item">
+                    <a href="https://thehackernews.com/2025/09/uk-arrest-two-teen-scattered-spider.html" class="post-link">U.K. Arrests Two Teen Scattered Spider Hackers Linked to August 2024 TfL Cyber Attack</a>
+                    <p class="post-date"><em>2025-09-19T07:05:00.000Z</em></p>
+                    <p class="post-description">Law enforcement in the U.K. arrested two teens from Scattered Spider for their role in a cyberattack targeting Transport for London (TfL).</p>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>General Security News</h2>
-            <ul>
-                <li>
-                    <a href="https://www.securityweek.com/cyberattack-disrupts-check-in-systems-at-major-european-airports/">Cyberattack Disrupts Check-In Systems at Major European Airports</a> (2025-09-20)
-                    <p>A cyberattack disrupted electronic check-in systems at major European airports, forcing passengers to rely on manual check-in and boarding procedures.</p>
+        <section class="section-tile">
+            <h2 class="section-title">General Security News</h2>
+            <ul class="post-list">
+                <li class="post-item">
+                    <a href="https://www.securityweek.com/cyberattack-disrupts-check-in-systems-at-major-european-airports/" class="post-link">Cyberattack Disrupts Check-In Systems at Major European Airports</a>
+                    <p class="post-date"><em>2025-09-20T15:33:00.000Z</em></p>
+                    <p class="post-description">A cyberattack forced major European airports to revert to manual check-in and boarding processes.</p>
                 </li>
-                <li>
-                    <a href="https://aws.amazon.com/blogs/security/summer-2025-soc-1report-is-now-available-with-183-services-in-scope/">Summer 2025 SOC 1 Report Available for 183 AWS Services</a> (2025-09-19)
-                    <p>AWS released its Summer 2025 SOC 1 report, covering 183 services and demonstrating continuous compliance with security controls.</p>
+                <li class="post-item">
+                    <a href="https://aws.amazon.com/blogs/security/summer-2025-soc-1report-is-now-available-with-183-services-in-scope/" class="post-link">Summer 2025 SOC 1 Report Now Available</a>
+                    <p class="post-date"><em>2025-09-19T16:28:41.000Z</em></p>
+                    <p class="post-description">AWS releases its Summer 2025 SOC 1 report, covering 183 services and demonstrating continuous compliance with security standards.</p>
                 </li>
-                <li>
-                    <a href="https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/">AWS Organizations Now Supports Full IAM Language for Service Control Policies</a> (2025-09-19)
-                    <p>AWS Organizations now allows full IAM policy language for service control policies, enabling more granular access control in multi-account environments.</p>
+                <li class="post-item">
+                    <a href="https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/" class="post-link">AWS Organizations Now Supports Full IAM Language for SCPs</a>
+                    <p class="post-date"><em>2025-09-19T17:50:10.000Z</em></p>
+                    <p class="post-description">AWS Organizations now supports full IAM policy language for service control policies (SCPs), enabling granular access control.</p>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="key-takeaways">
-            <h2>Key Takeaways</h2>
-            <p>This week’s cybersecurity news underscores the persistent threat of zero-click exploits, critical vulnerabilities in enterprise software, and the evolving tactics of state-sponsored attackers. Organizations must prioritize patching, monitor cloud backups, and stay vigilant against fake repositories. Law enforcement actions against hacking groups highlight the importance of proactive threat intelligence. Stay updated to safeguard your systems against emerging risks.</p>
-        </div>
+        <section class="key-takeaways">
+            <h2 class="key-takeaways-title">Key Takeaways</h2>
+            <p>This week’s cybersecurity landscape underscores the need for proactive defense strategies. Zero-click exploits, critical vulnerabilities, and malware campaigns highlight the evolving tactics of threat actors. Organizations must prioritize patch management, monitor cloud backups, and enhance endpoint security to mitigate risks. Law enforcement actions against hacking groups and AWS’s expanded IAM controls demonstrate the industry’s commitment to security, but vigilance remains essential.</p>
+        </section>
     </div>
 </body>
 </html>
