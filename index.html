@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Weekly Digest – September 18, 2025</title>
+    <title>Cybersecurity Roundup</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -11,25 +11,23 @@
             --accent-color: #e74c3c;
             --light-color: #ecf0f1;
             --dark-color: #2c3e50;
-            --text-color: #333;
-            --light-text: #7f8c8d;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark-color);
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f9f9f9;
             padding: 0;
+            margin: 0;
         }
 
         .container {
@@ -39,102 +37,98 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background-color: var(--primary-color);
             color: white;
             padding: 2rem 0;
             margin-bottom: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
+            box-shadow: 0 4px 12px var(--shadow-color);
         }
 
-        h1 {
+        header h1 {
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             text-align: center;
         }
 
-        .date {
+        header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
-            font-style: italic;
-            opacity: 0.9;
         }
 
-        .intro {
+        .content {
             background-color: white;
+            border-radius: 8px;
             padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px var(--shadow-color);
         }
 
         h2 {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
             font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            position: relative;
         }
 
-        .news-section {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            margin-bottom: 2rem;
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
         }
 
-        .news-item {
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid #eee;
         }
 
-        .news-item:last-child {
+        li:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
 
-        .news-item a {
+        a {
             color: var(--secondary-color);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
+            font-weight: 500;
+            transition: all var(--transition-speed) ease;
         }
 
-        .news-item a:hover {
+        a:hover {
             color: var(--accent-color);
             text-decoration: underline;
         }
 
-        .news-date {
-            color: var(--light-text);
-            font-size: 0.9rem;
+        p {
             margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
             display: block;
-        }
-
-        .news-description {
-            color: var(--text-color);
-            line-height: 1.5;
-        }
-
-        .key-takeaways {
-            background-color: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            margin-top: 2rem;
-            border-left: 4px solid var(--accent-color);
+            margin-bottom: 0.5rem;
         }
 
         footer {
             text-align: center;
             margin-top: 3rem;
-            padding: 1.5rem;
-            color: var(--light-text);
+            padding: 1.5rem 0;
+            color: #7f8c8d;
             font-size: 0.9rem;
         }
 
@@ -143,7 +137,7 @@
                 padding: 1rem;
             }
 
-            h1 {
+            header h1 {
                 font-size: 2rem;
             }
 
@@ -151,101 +145,100 @@
                 font-size: 1.5rem;
             }
 
-            .news-item a {
-                font-size: 1rem;
+            .content {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Cybersecurity Weekly Digest</h1>
-            <p class="date">September 18, 2025</p>
-        </header>
-
-        <div class="intro">
-            <p>This week’s edition highlights critical advancements in AI-driven cybersecurity, law enforcement actions against cybercriminals, and emerging threats from compromised infrastructure. Organizations are leveraging RAG-enhanced LLMs for secure AI interactions, while attackers exploit vulnerabilities in Ivanti and SonicWall systems. Meanwhile, new malware loaders like CountLoader and SilentSync underscore the evolving tactics of ransomware groups and state-sponsored actors. Stay informed and secure your defenses.</p>
+    <header>
+        <div class="container">
+            <h1>Cybersecurity Roundup: Critical Disruptions, Emerging Threats, and Law Enforcement Actions</h1>
+            <p>This week’s cybersecurity roundup highlights critical disruptions in critical infrastructure, emerging threats in cloud and AI security, and ongoing campaigns targeting enterprise and consumer systems. From airport check-in failures to zero-click exploits in ChatGPT, attackers are leveraging sophisticated techniques to compromise sensitive data. Meanwhile, law enforcement takes action against hacking groups, and cloud providers enhance security controls. Stay informed as these trends shape the evolving threat landscape.</p>
         </div>
+    </header>
 
-        <section class="news-section">
-            <h2>Vulnerabilities</h2>
-            <div class="news-item">
-                <a href="https://thehackernews.com/2025/09/cisa-warns-of-two-malware-strains.html">CISA Warns of Two Malware Strains Exploiting Ivanti EPMM CVE-2025-4427 and CVE-2025-4428</a>
-                <span class="news-date">2025-09-19T04:10:00.000Z</span>
-                <p class="news-description">CISA has identified two malware strains exploiting vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM), enabling threat actors to execute arbitrary code on compromised servers.</p>
-            </div>
-        </section>
-
-        <section class="news-section">
-            <h2>Malware</h2>
-            <div class="news-item">
-                <a href="https://thehackernews.com/2025/09/silentsync-rat-delivered-via-two.html">SilentSync RAT Delivered via Two Malicious PyPI Packages Targeting Python Developers</a>
-                <span class="news-date">2025-09-18T11:38:00.000Z</span>
-                <p class="news-description">Researchers discovered two malicious Python packages on PyPI that deliver the SilentSync RAT, enabling remote command execution, file exfiltration, and screen capturing.</p>
-            </div>
-            <div class="news-item">
-                <a href="https://thehackernews.com/2025/09/countloader-broadens-russian-ransomware.html">CountLoader Broadens Russian Ransomware Operations With Multi-Version Malware Loader</a>
-                <span class="news-date">2025-09-18T12:56:00.000Z</span>
-                <p class="news-description">CountLoader, a new malware loader, is being used by Russian ransomware groups to deploy tools like Cobalt Strike and PureHVNC RAT, expanding their operational reach.</p>
-            </div>
-        </section>
-
-        <section class="news-section">
-            <h2>Data Breaches</h2>
-            <div class="news-item">
-                <a href="https://www.securityweek.com/nearly-250000-impacted-by-data-breach-at-medical-associates-of-brevard/">Nearly 250,000 Impacted by Data Breach at Medical Associates of Brevard</a>
-                <span class="news-date">2025-09-18T08:38:52.000Z</span>
-                <p class="news-description">The BianLian ransomware group claimed responsibility for a cyberattack on Medical Associates of Brevard, impacting nearly 250,000 individuals.</p>
-            </div>
-            <div class="news-item">
-                <a href="https://thehackernews.com/2025/09/sonicwall-urges-password-resets-after.html">SonicWall Urges Password Resets After Cloud Backup Breach Affecting Under 5% of Customers</a>
-                <span class="news-date">2025-09-18T14:12:00.000Z</span>
-                <p class="news-description">SonicWall advised customers to reset credentials after a breach exposed backup firewall configuration files, affecting less than 5% of its user base.</p>
-            </div>
-            <div class="news-item">
-                <a href="https://www.securityweek.com/chatgpt-deep-research-targeted-in-server-side-data-theft-attack/">ChatGPT Targeted in Server-Side Data Theft Attack</a>
-                <span class="news-date">2025-09-18T14:30:00.000Z</span>
-                <p class="news-description">OpenAI patched a zero-click vulnerability in ChatGPT that allowed attackers to steal server-side data through a flaw in the ShadowLeak exploit.</p>
-            </div>
-        </section>
-
-        <section class="news-section">
-            <h2>Policy & Legal</h2>
-            <div class="news-item">
-                <a href="https://thehackernews.com/2025/09/uk-arrest-two-teen-scattered-spider.html">U.K. Arrests Two Teen Scattered Spider Hackers Linked to August 2024 TfL Cyber Attack</a>
-                <span class="news-date">2025-09-19T07:05:00.000Z</span>
-                <p class="news-description">Law enforcement in the U.K. arrested two members of the Scattered Spider hacking group for their alleged role in a cyberattack on Transport for London (TfL).</p>
-            </div>
-            <div class="news-item">
-                <a href="https://thehackernews.com/2025/09/how-cisos-can-drive-effective-ai.html">How CISOs Can Drive Effective AI Governance</a>
-                <span class="news-date">2025-09-18T11:30:00.000Z</span>
-                <p class="news-description">CISOs must adopt a balanced approach to AI governance, avoiding rigid policies while ensuring compliance and risk mitigation in AI-driven environments.</p>
-            </div>
-        </section>
-
-        <section class="news-section">
+    <div class="container">
+        <div class="content">
             <h2>General Security News</h2>
-            <div class="news-item">
-                <a href="https://aws.amazon.com/blogs/security/authorizing-access-to-data-with-rag-implementations/">Authorizing access to data with RAG implementations</a>
-                <span class="news-date">2025-09-18T23:27:06.000Z</span>
-                <p class="news-description">Organizations are using Retrieval-Augmented Generation (RAG) to enhance LLMs with proprietary data, improving the accuracy of AI-driven customer interactions.</p>
-            </div>
-            <div class="news-item">
-                <a href="https://www.securityweek.com/virtual-event-today-attack-surface-management-summit/">Watch Now: Attack Surface Management Summit – All Sessions Available</a>
-                <span class="news-date">2025-09-18T12:21:37.000Z</span>
-                <p class="news-description">Videos from SecurityWeek’s Attack Surface Management Virtual Summit are now available for on-demand viewing.</p>
-            </div>
-        </section>
+            <ul>
+                <li>
+                    <a href="https://www.securityweek.com/cyberattack-disrupts-check-in-systems-at-major-european-airports/">Cyberattack Disrupts Check-In Systems at Major European Airports</a>
+                    <span class="date">(2025-09-20)</span>
+                    <p>A cyberattack disrupted electronic check-in systems at major European airports, forcing passengers to rely on manual check-in and boarding. The incident affected Collins Aerospace systems, impacting passenger check-ins, boarding passes, and luggage handling.</p>
+                </li>
+                <li>
+                    <a href="https://aws.amazon.com/blogs/security/summer-2025-soc-1report-is-now-available-with-183-services-in-scope/">Summer 2025 SOC 1 Report Now Available</a>
+                    <span class="date">(2025-09-19)</span>
+                    <p>AWS has released its Summer 2025 SOC 1 report, covering 183 services over a 12-month period. The report demonstrates AWS’s commitment to adhering to security and compliance standards.</p>
+                </li>
+                <li>
+                    <a href="https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/">AWS Organizations Now Supports Full IAM Language for SCPs</a>
+                    <span class="date">(2025-09-19)</span>
+                    <p>AWS Organizations now supports full IAM policy language for Service Control Policies (SCPs), allowing for more granular access control and enhanced security management.</p>
+                </li>
+                <li>
+                    <a href="https://www.securityweek.com/airport-cyberattack-disrupts-more-flights-across-europe/">Airport Cyberattack Disrupts More Flights Across Europe</a>
+                    <span class="date">(2025-09-21)</span>
+                    <p>An ongoing cyberattack has disrupted airport operations across Europe, affecting passenger check-ins, boarding passes, and luggage handling systems.</p>
+                </li>
+            </ul>
 
-        <section class="key-takeaways">
-            <h2>Key Takeaways</h2>
-            <p>This week’s cybersecurity news underscores the critical need for proactive defense strategies. The rise of AI-driven threats and sophisticated malware loaders demands robust governance frameworks and continuous monitoring. Organizations must prioritize vulnerability management, secure credential practices, and legal compliance to mitigate risks effectively.</p>
-        </section>
+            <h2>Policy & Legal</h2>
+            <ul>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/uk-arrest-two-teen-scattered-spider.html">U.K. Arrests Two Teen Scattered Spider Hackers</a>
+                    <span class="date">(2025-09-19)</span>
+                    <p>Law enforcement in the U.K. has arrested two members of the Scattered Spider hacking group, linked to a 2024 cyberattack on Transport for London (TfL).</p>
+                </li>
+            </ul>
 
-        <footer>
-            <p>© 2025 Cybersecurity Weekly Digest. All rights reserved.</p>
-        </footer>
+            <h2>Data Breaches</h2>
+            <ul>
+                <li>
+                    <a href="https://www.securityweek.com/in-other-news-600k-hit-by-healthcare-breaches-major-shinyhunters-hacks-deepseeks-coding-bias/">600k Hit by Healthcare Breaches, Major ShinyHunters Hacks</a>
+                    <span class="date">(2025-09-19)</span>
+                    <p>Over 600,000 individuals were affected by healthcare breaches, alongside major hacks targeting ShinyHunters, with DeepSeek’s coding bias also drawing attention.</p>
+                </li>
+            </ul>
+
+            <h2>Malware</h2>
+            <ul>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/dprk-hackers-use-clickfix-to-deliver.html">DPRK Hackers Use ClickFix to Deliver BeaverTail Malware</a>
+                    <span class="date">(2025-09-18)</span>
+                    <p>North Korean hackers are using ClickFix-style lures to deliver BeaverTail malware in crypto job scams, targeting marketing and trading roles.</p>
+                </li>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/lastpass-warns-of-fake-repositories.html">LastPass Warns of Fake Repositories Infecting macOS</a>
+                    <span class="date">(2025-09-20)</span>
+                    <p>LastPass has issued a warning about fake GitHub repositories distributing Atomic infostealer malware, targeting macOS users.</p>
+                </li>
+            </ul>
+
+            <h2>Vulnerabilities</h2>
+            <ul>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/shadowleak-zero-click-flaw-leaks-gmail.html">ShadowLeak Zero-Click Flaw Leaks Gmail Data via ChatGPT</a>
+                    <span class="date">(2025-09-20)</span>
+                    <p>A zero-click vulnerability in OpenAI’s ChatGPT Deep Research agent allows attackers to leak Gmail inbox data with a single crafted email.</p>
+                </li>
+                <li>
+                    <a href="https://www.securityweek.com/chatgpt-deep-research-targeted-in-server-side-data-theft-attack/">ChatGPT Targeted in Server-Side Data Theft Attack</a>
+                    <span class="date">(2025-09-21)</span>
+                    <p>ChatGPT has been targeted in a server-side data theft attack, highlighting ongoing risks in AI-driven platforms.</p>
+                </li>
+            </ul>
+
+            <p>As cyber threats continue to evolve, organizations must prioritize proactive security measures, stay updated on emerging vulnerabilities, and enforce robust access controls. The recent disruptions in critical infrastructure and the growing sophistication of attacks underscore the need for continuous vigilance in cybersecurity.</p>
+        </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Cybersecurity Roundup. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
