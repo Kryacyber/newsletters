@@ -10,238 +10,249 @@
             --accent-orange: #F38144;
             --light-gray: #f8f9fa;
             --dark-gray: #333;
-            --border-radius: 12px;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--dark-gray);
-            background-color: #f5f7fa;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 20px;
         }
 
-        .header {
+        header {
             text-align: center;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
+            padding: 30px 0;
             background-color: var(--primary-blue);
             color: white;
-            border-radius: var(--border-radius);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .header h3 {
-            margin: 0.5rem 0;
+        .title-container {
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 0;
             font-weight: 600;
         }
 
-        .header .date {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
+        .main-title {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .date {
+            font-size: 1rem;
+            opacity: 0.8;
         }
 
         .summary {
             background-color: white;
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 2rem;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
-        .summary h1 {
+        h1, h2 {
             color: var(--primary-blue);
             border-bottom: 2px solid var(--accent-orange);
-            padding-bottom: 0.5rem;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
             margin-top: 0;
         }
 
-        .summary p {
-            margin-bottom: 0;
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 30px;
         }
 
-        .section {
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
             background-color: white;
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 2rem;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
         }
 
-        .section h2 {
-            color: var(--primary-blue);
-            border-left: 4px solid var(--accent-orange);
-            padding-left: 1rem;
-            margin-top: 0;
+        li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .section ul {
-            padding-left: 1.5rem;
-        }
-
-        .section li {
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .section li:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .section a {
+        a {
             color: var(--primary-blue);
             text-decoration: none;
             font-weight: 600;
         }
 
-        .section a:hover {
+        a:hover {
             color: var(--accent-orange);
             text-decoration: underline;
         }
 
-        .section .date {
-            color: #666;
+        .post-date {
+            color: var(--accent-orange);
             font-size: 0.9rem;
             display: block;
-            margin-top: 0.25rem;
+            margin-bottom: 5px;
         }
 
-        .takeaways {
+        .conclusion {
             background-color: white;
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 2rem;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
-        .takeaways p {
-            margin: 0;
-        }
-
-        .takeaways strong {
-            color: var(--primary-blue);
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 1rem;
+                padding: 10px;
             }
 
-            .header, .summary, .section, .takeaways {
-                padding: 1rem;
+            .main-title {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            li {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h3>Krya Solutions: Cybersecurity Weekly</h3>
-            <h3>AI-Driven Insights on Emerging Threats and Major Disruptions</h3>
+        <header>
+            <div class="title-container">
+                <h3 class="main-title">Krya Solutions: Cybersecurity Weekly</h3>
+                <h3 class="subtitle">AI-Driven Insights on Emerging Threats and Major Disruptions</h3>
+            </div>
             <div class="date">21 September, 2025</div>
-        </div>
+        </header>
 
-        <div class="summary">
-            <h1>Cybersecurity News Digest: Critical Disruptions, Zero-Click Exploits, and High-Profile Arrests</h1>
-            <p>This week's cybersecurity news highlights critical disruptions in airport systems, emerging zero-click vulnerabilities, and high-profile arrests of hackers. AWS and Microsoft patched severe flaws, while DPRK-linked actors exploited cryptocurrency job scams. SonicWall and LastPass warned of credential breaches and malware campaigns. Stay informed and secure your operations with these urgent updates.</p>
-        </div>
+        <section class="summary">
+            <h1>Cybersecurity Weekly Digest: Critical Vulnerabilities, Global Threats, and Emerging Attack Trends</h1>
+            <p>This week’s cybersecurity landscape highlights critical vulnerabilities, global threats, and emerging attack trends. Key insights include a massive telecom attack thwarted at the UN, a sophisticated fraud ring dismantled in Europe, and a critical patch bypass in Supermicro systems. Microsoft’s Entra ID exposure and GitHub’s npm security overhaul underscore the urgency of proactive measures. Meanwhile, a Chinese-speaking SEO poisoning campaign and a Libraesva ESG flaw reveal persistent state-sponsored and supply chain risks. Stay vigilant—these threats demand immediate attention.</p>
+        </section>
 
-        <div class="section">
-            <h2>General Security News</h2>
-            <ul>
-                <li>
-                    <a href="https://www.securityweek.com/cyberattack-disrupts-check-in-systems-at-major-european-airports/">Cyberattack Disrupts Check-In Systems at Major European Airports</a>
-                    <span class="date">(2025-09-20)</span>
-                    <p>A cyberattack forced major European airports to switch to manual check-in and boarding, disrupting operations for thousands of passengers.</p>
-                </li>
-                <li>
-                    <a href="https://aws.amazon.com/blogs/security/summer-2025-soc-1report-is-now-available-with-183-services-in-scope/">Summer 2025 SOC 1 Report Now Available</a>
-                    <span class="date">(2025-09-19)</span>
-                    <p>AWS released its Summer 2025 SOC 1 report, covering 183 services and demonstrating ongoing compliance with security controls.</p>
-                </li>
-                <li>
-                    <a href="https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/">AWS Organizations Now Supports Full IAM Language for SCPs</a>
-                    <span class="date">(2025-09-19)</span>
-                    <p>AWS expanded service control policies (SCPs) to support full IAM language, enabling more granular access management.</p>
-                </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/uk-arrest-two-teen-scattered-spider.html">U.K. Arrests Two Teen Scattered Spider Hackers</a>
-                    <span class="date">(2025-09-19)</span>
-                    <p>Law enforcement arrested two members of the Scattered Spider hacking group for their role in a 2024 cyberattack against Transport for London.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Data Breaches</h2>
-            <ul>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/shadowleak-zero-click-flaw-leaks-gmail.html">ShadowLeak Zero-Click Flaw Leaks Gmail Data via OpenAI ChatGPT</a>
-                    <span class="date">(2025-09-20)</span>
-                    <p>Researchers uncovered a zero-click vulnerability in OpenAI’s Deep Research agent that could leak Gmail data without user interaction.</p>
-                </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/sonicwall-urges-password-resets-after.html">SonicWall Warns of Cloud Backup Breach</a>
-                    <span class="date">(2025-09-18)</span>
-                    <p>SonicWall detected unauthorized access to firewall backup files, affecting less than 5% of customers and urging password resets.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Malware</h2>
-            <ul>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/dprk-hackers-use-clickfix-to-deliver.html">DPRK Hackers Use ClickFix Lures to Deliver BeaverTail Malware</a>
-                    <span class="date">(2025-09-21)</span>
-                    <p>DPRK-linked actors exploited ClickFix-style lures to deploy BeaverTail malware in cryptocurrency job scams.</p>
-                </li>
-                <li>
-                    <a href="https://thehackernews.com/2025/09/lastpass-warns-of-fake-repositories.html">LastPass Warns of Fake macOS Malware Campaign</a>
-                    <span class="date">(2025-09-20)</span>
-                    <p>LastPass alerted users to fake GitHub repositories distributing Atomic infostealer malware targeting macOS systems.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section">
+        <section class="content">
             <h2>Vulnerabilities</h2>
             <ul>
                 <li>
-                    <a href="https://www.securityweek.com/fortra-patches-critical-goanywhere-mft-vulnerability/">Fortra Patches Critical GoAnywhere MFT Vulnerability</a>
-                    <span class="date">(2025-09-22)</span>
-                    <p>Fortra addressed a critical deserialization flaw in GoAnywhere MFT that could enable command injection.</p>
+                    <span class="post-date">2025-09-23</span>
+                    <a href="https://www.securityweek.com/a-massive-telecom-threat-was-stopped-right-as-world-leaders-gathered-at-un-headquarters-in-new-york/">Massive Telecom Threat Stopped at UN</a>
+                    <p>A coordinated attack targeting telecom infrastructure was thwarted at the UN headquarters, involving over 300 servers and 100,000 SIM cards designed to mimic cellphones and overwhelm networks.</p>
                 </li>
                 <li>
-                    <a href="https://thehackernews.com/2025/09/microsoft-patches-critical-entra-id.html">Microsoft Patches Critical Entra ID Token Validation Flaw</a>
-                    <span class="date">(2025-09-22)</span>
-                    <p>Microsoft fixed a severe token validation issue in Entra ID that could allow attackers to impersonate Global Administrators.</p>
+                    <span class="post-date">2025-09-23</span>
+                    <a href="https://www.securityweek.com/patch-bypassed-for-supermicro-vulnerability-allowing-bmc-hack/">Patch Bypassed for Supermicro Vulnerability</a>
+                    <p>Researchers discovered a method to bypass a patch for a critical Supermicro vulnerability, allowing attackers to exploit a Baseboard Management Controller (BMC) flaw.</p>
+                </li>
+                <li>
+                    <span class="post-date">2025-09-24</span>
+                    <a href="https://thehackernews.com/2025/09/state-sponsored-hackers-exploiting.html">State-Sponsored Hackers Exploiting Libraesva ESG Flaw</a>
+                    <p>State-sponsored threat actors are exploiting a command injection vulnerability in Libraesva’s Email Security Gateway (ESG), posing a medium-severity risk.</p>
                 </li>
             </ul>
-        </div>
 
-        <div class="section">
+            <h2>Malware</h2>
+            <ul>
+                <li>
+                    <span class="post-date">2025-09-23</span>
+                    <a href="https://thehackernews.com/2025/09/badiis-malware-spreads-via-seo.html">BadIIS Malware Spreads via SEO Poisoning</a>
+                    <p>A Chinese-speaking threat actor is using SEO poisoning to deploy BadIIS malware, targeting East and Southeast Asia, particularly Vietnam, by redirecting traffic and planting web shells.</p>
+                </li>
+            </ul>
+
+            <h2>Data Breaches</h2>
+            <ul>
+                <li>
+                    <span class="post-date">2025-09-23</span>
+                    <a href="https://www.securityweek.com/jaguar-land-rover-says-shutdown-will-continue-until-at-least-oct-1-after-cyberattack/">Jaguar Land Rover Extends Shutdown After Cyberattack</a>
+                    <p>Jaguar Land Rover has extended its production shutdown until at least October 1st following a cyberattack that disrupted operations.</p>
+                </li>
+                <li>
+                    <span class="post-date">2025-09-23</span>
+                    <a href="https://www.securityweek.com/automotive-titan-stellantis-discloses-data-breach/">Stellantis Discloses Data Breach</a>
+                    <p>Automotive giant Stellantis disclosed a data breach involving stolen customer contact information from a third-party service provider.</p>
+                </li>
+            </ul>
+
             <h2>Policy & Legal</h2>
             <ul>
                 <li>
-                    <p>No new posts in this category this week.</p>
+                    <span class="post-date">2025-09-23</span>
+                    <a href="https://thehackernews.com/2025/09/eurojust-arrests-5-in-100m.html">Eurojust Arrests 5 in €100M Cryptocurrency Fraud</a>
+                    <p>European law enforcement arrested five suspects in a €100 million cryptocurrency investment fraud scheme targeting victims in France, Germany, Italy, and Spain.</p>
                 </li>
             </ul>
-        </div>
 
-        <div class="takeaways">
-            <p><strong>Key Takeaways:</strong> Critical infrastructure disruptions, zero-click exploits, and high-profile arrests underscore the evolving threat landscape. Organizations must prioritize patching vulnerabilities, monitoring for malware campaigns, and strengthening access controls. Stay vigilant, and leverage security updates promptly to mitigate risks.</p>
-        </div>
+            <h2>General Security News</h2>
+            <ul>
+                <li>
+                    <span class="post-date">2025-09-19</span>
+                    <a href="https://aws.amazon.com/blogs/security/unlock-new-possibilities-aws-organizations-service-control-policy-now-supports-full-iam-language/">AWS Expands IAM Support for Service Control Policies</a>
+                    <p>AWS Organizations now supports full IAM policy language for service control policies, enabling more granular access control and enhanced security.</p>
+                </li>
+                <li>
+                    <span class="post-date">2025-09-23</span>
+                    <a href="https://www.securityweek.com/all-microsoft-entra-tenants-were-exposed-to-silent-compromise-via-invisible-actor-tokens-researcher/">Microsoft Entra ID Silent Compromise Risk</a>
+                    <p>Researchers found that all Microsoft Entra tenants were exposed to a silent compromise via invisible actor tokens, highlighting risks in identity management.</p>
+                </li>
+                <li>
+                    <span class="post-date">2025-09-23</span>
+                    <a href="https://thehackernews.com/2025/09/github-mandates-2fa-and-short-lived.html">GitHub Strengthens npm Supply Chain Security</a>
+                    <p>GitHub is mandating 2FA and short-lived tokens to address supply chain attacks in the npm ecosystem, including the recent Shai-Hulud attack.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="conclusion">
+            <h2>Conclusion</h2>
+            <p>This week’s cybersecurity news underscores the evolving threat landscape, with critical vulnerabilities, state-sponsored attacks, and supply chain risks demanding immediate attention. Organizations must prioritize proactive measures, such as patch management, identity security, and supply chain hardening, to mitigate emerging threats. Stay vigilant and adapt to these challenges to safeguard digital assets.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Krya Solutions. All rights reserved.</p>
+        </footer>
     </div>
 </body>
-</html
+</html>
