@@ -1,0 +1,8 @@
+[
+  {
+    "intro": "This month’s cybersecurity landscape is marked by critical deadlines, evolving AI threats, and persistent malware campaigns. The expiration of the Cybersecurity Information Sharing Act (CISA) raises urgent questions about threat intelligence governance, while security leaders are turning to AI for triage and detection—despite overwhelming alert volumes. Meanwhile, zero-click vulnerabilities in AI tools like OpenAI’s ChatGPT and the ShadowLeak attack highlight new risks in generative AI. Law enforcement actions against hackers and malware distribution campaigns targeting retail and telecom sectors underscore the global scope of cyber threats. Additionally, the CISA has added a critical Linux vulnerability to its Known Exploited Vulnerabilities catalog, emphasizing the need for proactive patching. As generative AI’s adoption grows, so too does the attack surface it presents, demanding vigilance across industries."
+  },
+  {
+    "outro": "As cyber threats evolve, the urgency to adapt grows. The expiration of CISA’s mandate and the rise of AI-driven attacks demand proactive governance and intelligent triage. Meanwhile, zero-click vulnerabilities in AI tools and the ShadowLeak attack reveal new risks in generative AI, forcing industries to reassess their defenses. Law enforcement actions and malware campaigns targeting retail and telecom sectors highlight the global scope of cyber threats, while the CISA’s addition of a critical Linux vulnerability underscores the need for immediate patching. As generative AI adoption expands, so does the attack surface, emphasizing the need for vigilance across all sectors."
+  }
+]

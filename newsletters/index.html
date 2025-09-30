@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krya Solutions: Cybersecurity Weekly | AI-Driven Insights on Emerging Threats and Major Disruptions</title>
+    <style>
+        :root {
+            --blue: #173962;
+            --orange: #F38144;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            background-color: var(--blue);
+            color: white;
+            border-radius: 8px;
+        }
+
+        h3 {
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 1.1rem;
+            color: var(--orange);
+            margin-top: 10px;
+        }
+
+        .summary {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+
+        h1, h2 {
+            color: var(--blue);
+            border-bottom: 2px solid var(--orange);
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .date-post {
+            color: #666;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .conclusion {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-style: italic;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>Krya Solutions: Cybersecurity Weekly</h3>
+            <h3>AI-Driven Insights on Emerging Threats and Major Disruptions</h3>
+            <div class="date">21 September, 2025</div>
+        </header>
+
+        <div class="summary">
+            <h1>Cybersecurity Weekly Digest: Phishing, Malware, and Critical Vulnerabilities</h1>
+            <p>This week, cybercriminals have intensified their tactics with targeted phishing campaigns, new malware variants, and critical vulnerabilities in enterprise systems. From phishing attacks impersonating Ukrainian government agencies to the exploitation of Salesforce AI vulnerabilities, attackers are leveraging sophisticated techniques to bypass defenses. Meanwhile, law enforcement has disrupted large-scale fraud operations, while critical infrastructure sectors face evolving threats. Stay ahead of these trends with our latest insights.</p>
+        </div>
+
+        <div class="section">
+            <h2>Malware</h2>
+            <ul>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/researchers-expose-svg-and-purerat.html">Researchers Expose Phishing Threats Distributing CountLoader and PureRAT</a>
+                    <span class="date-post">(2025-09-26)</span>
+                    <p>A new phishing campaign impersonates Ukrainian government agencies to deliver CountLoader, which then drops Amatera Stealer and PureMiner. The attack uses malicious SVG files to trick recipients into opening harmful attachments.</p>
+                </li>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/china-linked-plugx-and-bookworm-malware.html">China-Linked PlugX and Bookworm Malware Attacks Target Asian Telecom and ASEAN Networks</a>
+                    <span class="date-post">(2025-09-27)</span>
+                    <p>Telecom and manufacturing sectors in Central and South Asia are targeted by a new variant of PlugX malware, which shares features with RainyDay and Turian backdoors. The campaign abuses legitimate applications for DLL side-loading.</p>
+                </li>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/new-coldriver-malware-campaign-joins-bo.html">New COLDRIVER Malware Campaign Joins BO Team and Bearlyfy in Russia-Focused Cyberattacks</a>
+                    <span class="date-post">(2025-09-26)</span>
+                    <p>The COLDRIVER APT group launched a ClickFix-style campaign delivering BAITSWITCH and SIMPLEFIX malware, targeting Russian-speaking users. BAITSWITCH acts as a downloader for SIMPLEFIX, a lightweight payload.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Vulnerabilities</h2>
+            <ul>
+                <li>
+                    <a href="https://aws.amazon.com/blogs/security/how-to-develop-an-aws-security-hub-poc/">How to Develop an AWS Security Hub POC</a>
+                    <span class="date-post">(2025-09-26)</span>
+                    <p>AWS Security Hub now prioritizes critical security issues and provides actionable insights through centralized management. This helps organizations detect and respond to threats at scale in their cloud environments.</p>
+                </li>
+                <li>
+                    <a href="https://www.securityweek.com/no-patches-for-vulnerabilities-allowing-cognex-industrial-camera-hacking/">No Patches for Vulnerabilities Allowing Cognex Industrial Camera Hacking</a>
+                    <span class="date-post">(2025-09-26)</span>
+                    <p>Cognex advises customers to upgrade to newer versions of its machine vision products after vulnerabilities were discovered that could allow industrial camera hacking.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Data Breaches</h2>
+            <ul>
+                <li>
+                    <a href="https://www.securityweek.com/british-department-store-harrods-warns-customers-that-some-personal-details-taken-in-data-breach/">British Department Store Harrods Warns Customers That Some Personal Details Taken in Data Breach</a>
+                    <span class="date-post">(2025-09-28)</span>
+                    <p>Harrods has warned customers that personal details may have been compromised in a data breach linked to a cyberattack. Authorities arrested four suspects in connection with the attack.</p>
+                </li>
+                <li>
+                    <a href="https://www.securityweek.com/salesforce-ai-hack-enabled-crm-data-theft/">Salesforce AI Hack Enabled CRM Data Theft</a>
+                    <span class="date-post">(2025-09-25)</span>
+                    <p>Attackers exploited Salesforce AI vulnerabilities to steal CRM data in an attack named ForcedLeak. The breach involved prompt injection and an expired domain.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Policy & Legal</h2>
+            <ul>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/eurojust-arrests-5-in-100m.html">Eurojust Arrests 5 in €100M Cryptocurrency Investment Fraud Spanning 23 Countries</a>
+                    <span class="date-post">(2025-09-23)</span>
+                    <p>European law enforcement arrested five suspects in a €100 million cryptocurrency fraud scheme targeting victims in France, Germany, Italy, and Spain. The operation involved searches across multiple countries.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>General Security News</h2>
+            <ul>
+                <li>
+                    <a href="https://thehackernews.com/2025/09/crash-tests-for-security-why-bas-is.html">Crash Tests for Security: Why BAS Is Proof of Defense, Not Assumptions</a>
+                    <span class="date-post">(2025-09-26)</span>
+                    <p>Cybersecurity dashboards and compliance reports often rely on assumptions rather than real-world testing. Crash tests—simulating attacks—help prove defenses work in practice, not just on paper.</p>
+                </li>
+                <li>
+                    <a href="https://www.securityweek.com/in-other-news-lockbit-5-0-department-of-war-cybersecurity-framework-oneplus-vulnerability/">In Other News: LockBit 5.0, Department of War Cybersecurity Framework, OnePlus Vulnerability</a>
+                    <span class="date-post">(2025-09-26)</span>
+                    <p>Notable updates include LockBit 5.0, the Department of War’s cybersecurity framework, and a vulnerability in OnePlus devices. Additional breaches affected the Co-op, a South Korean credit card company, and Maryland Transit Administration.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="conclusion">
+            <p>This week’s cybersecurity landscape underscores the need for proactive threat detection, rapid response to vulnerabilities, and robust incident response planning. As attackers continue to evolve their tactics, staying informed and adapting defenses will be key to mitigating risks.</p>
+        </div>
+    </div>
+</body>
+</html>
