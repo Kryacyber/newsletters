@@ -1,14 +1,18 @@
-fetch("/intro-outro.json")
-    .then((res) => res.json())
-    .then((data) => {
-        const introContainer = document.getElementById("summary").querySelector("p");
-        const outroContainer = document.getElementById("takeaways").querySelector("p");
+fetch("./intro-outro.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const introContainer = document
+      .getElementById("summary")
+      .querySelector("p");
+    const outroContainer = document
+      .getElementById("takeaways")
+      .querySelector("p");
 
-        introContainer.innerHTML = data[0].intro;
-        outroContainer.innerHTML = data[1].outro;
-    })
+    introContainer.innerHTML = data[0].intro;
+    outroContainer.innerHTML = data[1].outro;
+  });
 
-fetch("/news-articles.json")
+fetch("./news-articles.json")
   .then((res) => res.json())
   .then((data) => {
     const container = document.getElementById("news-articles");
@@ -54,3 +58,17 @@ fetch("/news-articles.json")
     });
   })
   .catch((err) => console.error("Error loading JSON:", err));
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dateElement = document.getElementById("date");
+  if (dateElement) {
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+    dateElement.innerHTML = formattedDate;
+  }
+});
