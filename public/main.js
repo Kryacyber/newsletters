@@ -73,30 +73,49 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const openDialog = document.getElementById("openDialog");
-  const closeDialog = document.getElementById("closeDialog");
-  const emailDialog = document.getElementById("emailDialog");
-  const emailForm = document.getElementById("emailForm");
-  const emailInput = document.getElementById("emailInput");
+const openDialog = document.getElementById("openDialog");
+const closeDialog = document.getElementById("closeDialog");
+const emailDialog = document.getElementById("emailDialog");
+const emailForm = document.getElementById("emailForm");
+const emailInput = document.getElementById("emailInput");
 
-  openDialog.addEventListener("click", () => {
-    emailDialog.showModal();
-  });
-
-  closeDialog.addEventListener("click", () => {
+function closeDialogWithAnimation() {
+  emailDialog.classList.add('closing');
+  setTimeout(() => {
     emailDialog.close();
-  });
+    emailDialog.classList.remove('closing');
+    emailInput.value = "";
+  }, 300);
+}
 
-  emailForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const email = emailInput.value.trim();
+openDialog.addEventListener("click", () => {
+  emailDialog.showModal();
+  emailInput.focus();
+});
 
-    if (email) {
-      console.log("Collected email:", email); // Replace with actual submission logic
-      emailDialog.close();
-      alert("Thanks for subscribing!");
-      emailInput.value = "";
-    }
-  });
+closeDialog.addEventListener("click", () => {
+  closeDialogWithAnimation();
+  emailInput.value = "";
+});
+
+emailDialog.addEventListener("click", (e) => {
+  if (e.target === emailDialog) {
+    closeDialogWithAnimation();
+    emailInput.value = "";
+  }
+});
+
+emailForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = emailInput.value.trim();
+
+  if (email) {
+    console.log("Collected email:", email);
+    // TODO: Replace with actual API call to save email
+    // fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) })
+    
+    alert("Thanks for subscribing! We'll keep you updated with the latest cybersecurity insights.");
+    emailDialog.close();
+    emailInput.value = "";
+  }
 });

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cybersecurity Weekly Digest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header" id="header">
+        <div class="header-content">
+          <a
+            href="https://kryasolutions.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="logo-link"
+          >
+            <img src="./assets/krya.svg" alt="Krya Solutions" class="logo" />
+          </a>
+          
+          <div class="header-center">
+            <h1 class="header-text">Cyber Security Weekly Digest</h1>
+            <p class="date" id="date"></p>
+          </div>
+
+          <div class="header-actions">
+            <button id="openDialog" class="btn-subscribe">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <dialog id="emailDialog" class="email-dialog">
+        <form method="dialog" id="emailForm">
+          <h3>Subscribe to our Newsletters</h3>
+          <p>Latest cybersecurity insights delivered to your inbox.</p>
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Enter your email address"
+            required
+          />
+          <div class="dialog-actions">
+            <button type="button" id="closeDialog" class="btn-secondary">Cancel</button>
+            <button type="submit" class="btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </dialog>
+
+      <div class="summary" id="summary">
+        <h2>AI-Driven Insights on Emerging Threats and Major Disruptions</h2>
+        <p></p>
+      </div>
+
+      <div id="news-articles"></div>
+
+      <div class="takeaways" id="takeaways">
+        <h2>Key Takeaways</h2>
+        <p></p>
+      </div>
+    </div>
+  </body>
+
+  <script src="main.js" defer></script>
+</html>
