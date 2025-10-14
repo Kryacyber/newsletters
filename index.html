@@ -25,6 +25,25 @@
         <h1 class="header-text">Cyber Security Weekly Digest</h1>
         <p class="date" id="date"></p>
       </div>
+      <div class="newsletter-signup">
+        <button id="openDialog" class="btn-small">Subscribe</button>
+  
+        <dialog id="emailDialog" class="email-dialog">
+          <form method="dialog" id="emailForm">
+            <h3>Subscribe to Newsletter</h3>
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter your email"
+              required
+            />
+            <div class="dialog-actions">
+              <button type="submit" class="btn-primary">Subscribe</button>
+              <button type="button" id="closeDialog" class="btn-secondary">Cancel</button>
+            </div>
+          </form>
+        </dialog>
+      </div>
 
       <div class="summary" id="summary">
         <h2>AI-Driven Insights on Emerging Threats and Major disruptions</h2>

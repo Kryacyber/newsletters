@@ -72,3 +72,31 @@ document.addEventListener("DOMContentLoaded", () => {
     dateElement.innerHTML = formattedDate;
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openDialog = document.getElementById("openDialog");
+  const closeDialog = document.getElementById("closeDialog");
+  const emailDialog = document.getElementById("emailDialog");
+  const emailForm = document.getElementById("emailForm");
+  const emailInput = document.getElementById("emailInput");
+
+  openDialog.addEventListener("click", () => {
+    emailDialog.showModal();
+  });
+
+  closeDialog.addEventListener("click", () => {
+    emailDialog.close();
+  });
+
+  emailForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+
+    if (email) {
+      console.log("Collected email:", email); // Replace with actual submission logic
+      emailDialog.close();
+      alert("Thanks for subscribing!");
+      emailInput.value = "";
+    }
+  });
+});
